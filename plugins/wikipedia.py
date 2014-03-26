@@ -16,13 +16,13 @@ paren_re = re.compile('\s*\(.*\)$')
 @hook.command
 def wiki_en(inp):
     search_url = api_prefix_en + params
-    get_items(inp, search_url)
+    return get_items(inp, search_url)
 
 @hook.command('w_fr')
 @hook.command
 def wiki_fr(inp):
     search_url = api_prefix_fr + params
-    get_items(inp, search_url)
+    return get_items(inp, search_url)
 
 def get_items(inp, url_query):
     """wiki <phrase> -- Gets first sentence of Wikipedia article on <phrase>."""
